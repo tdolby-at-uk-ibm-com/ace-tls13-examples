@@ -8,11 +8,14 @@ These examples call a TLSv1.3-only service on the internet (`tls13.1d.pw`) to te
 Clone this repo locally, using either the git command or the eGit plugin (included with ACE v12).
 
 Deploy the applications using either mqsicreateworkdir/mqsibar or to an integration node, and then use curl or a browser 
-to trigger the flows. Three flow URLs exist currently:
+to trigger the flows. Four flow URLs exist currently:
 
 - `/usingTLSHTTPRequest` for a flow that specifies "TLS" on the HTTPRequest node
 - `/explicitTLS12HTTPRequest` for a flow that specifies "TLSv1.2" on the HTTPRequest node
 - `/explicitTLS13HTTPRequest` for a flow that specifies "TLSv1.3" on the HTTPRequest node
+- `/usingTLS13HTTPRequestLE` for a flow that specifies "TLSv1.1" on the HTTPRequest node and then overrides it in the LocalEnvironment to use "TLSv1.3"
+
+The last two are equivalent, and test results for the last flow are not shown.
 
 ## Expected results with ACE 12.0.4
 
