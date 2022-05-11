@@ -1,0 +1,10 @@
+
+
+CREATE COMPUTE MODULE ExplicitTLS13HTTPRequest_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.Properties = InputRoot.Properties;
+		SET OutputRoot.JSON.Data.connectResult = 'success';
+		RETURN TRUE;
+	END;
+END MODULE;
