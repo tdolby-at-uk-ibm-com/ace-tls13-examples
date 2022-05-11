@@ -1,0 +1,10 @@
+
+
+CREATE COMPUTE MODULE UsingTLS13HTTPRequestLE_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.Properties = InputRoot.Properties;
+		SET OutputLocalEnvironment.Destination.HTTP.SSLProtocol = 'TLSv1.3';
+		RETURN TRUE;
+	END;
+END MODULE;
